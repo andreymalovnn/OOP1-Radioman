@@ -4,7 +4,7 @@ public class Radio {
     private int currentStation;
     private int currentVolume;
 
-// Выбор и настройка радиостанций:
+    // Выбор и настройка радиостанций:
     public void setCurrentStation(int currentStation) {
         if (currentStation < 0) {
             return;
@@ -23,11 +23,8 @@ public class Radio {
         if (currentStation < 9) {
             currentStation = currentStation + 1;
         }
-    }
-
-    public void changeOver(int currentStation) {
         if (currentStation == 9) {
-            this.currentStation = 0;
+            currentStation = 0;
         }
     }
 
@@ -35,16 +32,13 @@ public class Radio {
         if (currentStation > 0) {
             currentStation = currentStation - 1;
         }
-    }
-
-    public void changeBackOver(int currentStation) {
         if (currentStation == 0) {
-            this.currentStation = 9;
+            currentStation = 9;
         }
     }
 
 
-// Выбор и настройка уровня громкости:
+    // Выбор и настройка уровня громкости:
     public void setCurrentVolume(int currentVolume) {
         if (currentVolume < 0) {
             return;
@@ -63,11 +57,8 @@ public class Radio {
         if (currentVolume < 10) {
             currentVolume = currentVolume + 1;
         }
-    }
-
-    public void maxVolume(int currentVolume) {
         if (currentVolume == 10) {
-            this.currentStation = 10;
+            currentStation = 10;
         }
     }
 
@@ -75,11 +66,8 @@ public class Radio {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
         }
-    }
-
-    public void minVolume(int currentVolume) {
         if (currentVolume == 0) {
-            this.currentStation = 0;
+            currentStation = 0;
         }
     }
 
