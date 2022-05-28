@@ -2,7 +2,6 @@ package ru.netology.domain;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -19,7 +18,7 @@ public class RadioTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"0,1", "1,2", "5,6", "9,0"})
+    @CsvSource({"0,1", "5,6", "8,9", "9,0"})
     void shouldTuneStationUpAndOver(int currentStation, int expected) {
         Radio tuneUp = new Radio();
         tuneUp.setCurrentStation(currentStation);
@@ -29,7 +28,7 @@ public class RadioTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"9,8", "5,4", "0,9"})
+    @CsvSource({"9,8", "5,4", "1,0", "0,9"})
     void shouldTuneStationDownAndOver(int currentStation, int expected) {
         Radio tuneDown = new Radio();
         tuneDown.setCurrentStation(currentStation);
